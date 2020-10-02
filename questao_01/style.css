@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+#flex-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+}
+
+#flex-container > div.flex-div{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: center;
+    
+}
+
+#left{
+    grid-column-start: 1;
+    background-color: aquamarine;
+    
+}
+#right{
+    grid-column-start: 2;
+    background-color: tomato;
+}
+h1, h2{
+    text-align: center;
+    margin: 0 auto;
+}
+h2{
+    margin-bottom: 10px;
+}
+
+#slider-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: transparent;
+}

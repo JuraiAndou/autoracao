@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questão 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="flex-container">
+    <div id="left" class="flex-div">
+        <h1 id="text">ESCOLHA UMA COR</h1>
+    </div>
+    <div id="right" class="flex-div">
+        <div id="slider-container">
+            <h1 style="margin-bottom: 20px;">FUNDO</h1>
+            <h2>red</h2>
+            <input type="range" name="red" id="red-bg" min="0" max="255" value="0" oninput="slide_bg()">
+            <h2>green</h2>
+            <input type="range" name="green" id="green-bg" min="0" max="255" value="0" oninput="slide_bg()">
+            <h2>blue</h2>
+            <input type="range" name="green" id="blue-bg" min="0" max="255" value="0" oninput="slide_bg()">
+        </div>
+        <div id="slider-container">
+            <h1 style="margin-bottom: 20px;">TEXTO</h1>
+            <h2>red</h2>
+            <input type="range" name="red" id="red-txt" min="0" max="255" value="0" oninput="slide_txt()">
+            <h2>green</h2>
+            <input type="range" name="green" id="green-txt" min="0" max="255" value="0" oninput="slide_txt()">
+            <h2>blue</h2>
+            <input type="range" name="green" id="blue-txt" min="0" max="255" value="0" oninput="slide_txt()">
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
