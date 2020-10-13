@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    font-family: sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: cadetblue;
+}
+#numeros span{
+    border: 1px solid cadetblue;
+    margin: 10px;
+    font-size: 50pt;
+
+    width: 80px;
+    height: 75px;
+    display: inline-block;
+    text-align: center;
+}
+
+button{
+    font-size: 50pt;
+    background-color: rgb(22, 22, 22);
+    color: tomato;
+    border: 1px solid tomato;
+}
+
+button:hover{
+    cursor: pointer;
+    color:rgb(255, 38, 0);
+    border-color: rgb(255, 38, 0);
+}
+
+span{
+    color: tomato;
+}
+
+button:focus{
+    outline: none;
+}
