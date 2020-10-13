@@ -1,0 +1,49 @@
+#title{
+    color: rgb(77, 47, 14);
+    width: 659px;
+    padding: 20px;
+    text-align: left;
+    margin: 0 auto;
+    border: 1px solid rgb(77, 47, 14);
+    border-bottom: none;
+    background-image: url(beans.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+h1{
+    margin: 0;
+}
+.week-days{
+    padding: 10px;
+    background-color:rgb(77, 47, 14);
+    color: rgb(253, 232, 209);
+}
+.not-today{
+    color: rgb(184, 152, 118);
+}
+.days{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 700px;
+    margin: 0 auto;
+    color: rgb(77, 47, 14);
+}
+table, th, td {
+    border: 1px solid rgb(77, 47, 14);
+  }
+.days td{
+    height: 70px;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.days .note-left{
+    border-right: none;
+    display: contents;
+    padding: 5px;
+}
+.days .note{
+    border: none;
+}
