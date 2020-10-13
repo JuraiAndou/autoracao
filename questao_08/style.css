@@ -1,6 +1,40 @@
+a{
+    float: right;
+}
 .imagem-produto{
     object-fit: cover;
     
     height: 200px;
     width: 200px;
+}
+
+#loja{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#carrinho-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.produto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.iptPreco{
+    width: 4em;
+    text-align: right;
+    border: none;
+}
+
+.iptPreco:focus{
+    outline: none;
 }
