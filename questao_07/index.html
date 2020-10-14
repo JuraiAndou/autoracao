@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain</title>
+</head>
+<body>
+    <svg id="svg" width="500" height="500" style="display:block; margin: 0 auto;
+    border: 3px solid darkslategrey;">
+
+        <rect id="drop" width="3" height="5" x="30" y="30" fill="blue"></rect>
+        <animate 
+        xlink:href="#drop"
+        attributeName="y"
+        from="30"
+        to="500" 
+        dur="1s"
+        begin="0s"
+        fill="remove"
+        repeatCount="indefinite"  
+        id="drop-anim"/>
+        
+        <rect id="drop2" width="3" height="5" x="40" y="15" fill="blue"></rect>
+        <animate 
+        xlink:href="#drop2"
+        attributeName="y"
+        from="15"
+        to="500" 
+        dur="1s"
+        begin=".3s"
+        fill="remove"
+        repeatCount="indefinite"  
+        id="drop-anim"/>
+        
+        <rect id="drop3" width="3" height="5" x="50" y="32" fill="blue"></rect>
+        <animate 
+        xlink:href="#drop3"
+        attributeName="y"
+        from="32"
+        to="500" 
+        dur="1s"
+        begin=".5s"
+        fill="remove"
+        repeatCount="indefinite"  
+        id="drop-anim"/>
+        
+        <rect id="drop4" width="3" height="5" x="60" y="20" fill="blue"></rect>
+        <animate 
+        xlink:href="#drop4"
+        attributeName="y"
+        from="20"
+        to="500" 
+        dur="1s"
+        begin=".1s"
+        fill="remove"
+        repeatCount="indefinite"  
+        id="drop-anim"/>
+        
+        <rect id="drop5" width="3" height="5" x="70" y="40" fill="blue"></rect>
+        <animate 
+        xlink:href="#drop5"
+        attributeName="y"
+        from="40"
+        to="500" 
+        dur="1s"
+        begin=".6s"
+        fill="remove"
+        repeatCount="indefinite"  
+        id="drop-anim"/>
+    </svg>
+
+    <script>
+        var svg = document.getElementById("svg");
+        console.log(svg);
+        
+        let newElement = document.createElement('rect');
+        newElement.setAttribute('fill','orange');
+        newElement.setAttribute('width','200');
+        newElement.setAttribute('height','200');
+        newElement.setAttribute('x','200');
+        newElement.setAttribute('y','200');
+        document.getElementById("svg").appendChild(newElement);
+    </script>
+</body>
+</html>
