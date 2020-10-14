@@ -2,16 +2,23 @@ var loja;
 var listaCarrinho;
 var itemList = [];
 var carrinho = [];
+var precoTotal;
 $(document).ready(function(){
     loja = $("#loja");
     listaCarrinho = $("#carrinho");
     itemList = [
-        new Item("tMochi", 4.95, "mochi.jpg", "Tama-ya Mochi"),
-        new Item("ozMochi", 4.95, "mochi02.jpg", "Ricecake Oh! Ze Mochi")
+        new Item("tMochi", 4.95, "mochi.jpg", "Tama-ya's Mochi"),
+        new Item("ozMochi", 4.95, "mochi02.jpg", "Ricecake Oh! Ze's Mochi"),
+        new Item("daifuku", 3.00, "Daifuku.jpg", "Tama-ya's Daifuku"),
+        new Item("lvMochi", 5, "LoveyDoveyMochi.jpg", "Tama-ya's Lovey Dovey Mochi")
     ];
     for (let i in itemList) {
         itemList[i].displayMarket();
         itemList[i].displayCarrinho();
+    }
+    displayPreco();
+    if(localStorage.length < 1){
+        emptyMsg();
     }
     
     $(".btn-comprar").click(function(obj){
@@ -51,7 +58,26 @@ function addCarrinho(item, val){
 
 function limpaCarrinho() {
     localStorage.clear();
-    $("#carrinho").html("");
+    listaCarrinho.html("");
+    emptyMsg();
+}
+
+function displayPreco() {
+    precoTotal = 0;
+    for (const i in itemList) {
+        let amount = parseInt(localStorage.getItem(itemList[i].name));
+        if(amount > 0){
+            precoTotal += itemList[i].price * amount;
+        }
+    }
+    if(precoTotal > 0){
+        listaCarrinho.append("<p>Preço total R$: "+Math.round((precoTotal + Number.EPSILON) * 100) / 100+"</p>");
+        console.log(precoTotal);
+    }
+}
+
+function emptyMsg() {
+    listaCarrinho.append("<h1>carrinho vazio</h1>");
 }
 
 let Item = class Item{
@@ -79,7 +105,7 @@ let Item = class Item{
     displayCarrinho(){
         if(localStorage.getItem(this.name) != undefined && localStorage.getItem(this.name) > 0){
             listaCarrinho.append(
-                "<p>"+localStorage.getItem(this.name)+" x "+this.title+" R$: "+this.price   +"</p>"
+                "<p>"+localStorage.getItem(this.name)+" x "+this.title+" R$: "+this.price   +"</p><hr>"
             );
         }
     }
@@ -88,8 +114,12 @@ let Item = class Item{
         if(localStorage.getItem(this.name) != undefined){
             this.quant = parseInt(localStorage.getItem(this.name));
         }
+        if(localStorage.getItem("precoTotal") != undefined){
+            precoTotal = localStorage.getItem("precoTotal");
+        }
         this.quant += parseInt(val);
         console.log((this.name)+"", this.quant);
         localStorage.setItem((this.name)+"", this.quant);
+        
     }
 };

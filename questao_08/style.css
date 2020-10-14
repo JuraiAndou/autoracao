@@ -1,6 +1,21 @@
-a{
-    float: right;
+*{
+    font-family: sans-serif;
+    color: rgb(21, 36, 36);
 }
+a{
+    position: absolute;
+    right: 200px;
+    top: 10px;
+    text-decoration: none;
+    font-size: 30pt;
+}
+
+button{
+    background-color: darkslategray;
+    border: 2px solid rgb(21, 36, 36);
+    color: lightgray;
+}
+
 .imagem-produto{
     object-fit: cover;
     
@@ -9,9 +24,9 @@ a{
 }
 
 #loja{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #carrinho-container{
@@ -30,11 +45,37 @@ a{
 }
 
 .iptPreco{
-    width: 4em;
+    width: 2.3em;
     text-align: right;
     border: none;
+    background-color: lightgray;
+    font-size: 12pt;
 }
 
 .iptPreco:focus{
     outline: none;
+}
+body{
+    margin: 0;
+}
+.container{
+    background-color: darkslategrey;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+.corpo{
+    background-color: lightgray;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0 10% 0 10%;
+}
+
+.site{
+    margin: 0 auto;
+    width: 663px;
 }
