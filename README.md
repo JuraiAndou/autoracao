@@ -1,5 +1,5 @@
 # autoracao
- repositório pra meus projetos da cadeira de autoraeção 2
+ repositório pra meus projetos da cadeira de autoração 2
  
  se quizer rodar o localhoast execute na pasta o comando "npm run dev"
  
